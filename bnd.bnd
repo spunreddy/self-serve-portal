@@ -1,0 +1,12 @@
+Bundle-SymbolicName: portal
+Bundle-Version: 1.0.0
+Bundle-Name: Snaplogic Customer Portal
+Bundle-ClassPath:\
+  .,\
+  lib/jackson-databind.jar,\
+  lib/jackson-core.jar,\
+  lib/jackson-annotations
+-includeresource:\
+  lib/jackson-databind.jar=jackson-databind-2.0.1.jar,\
+  lib/jackson-core.jar=jackson-core-2.8.8.jar,\
+  lib/jackson-annotations=jackson-annotations-2.8.3.jar

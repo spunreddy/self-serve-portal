@@ -1,0 +1,49 @@
+buildscript {
+	dependencies {
+		classpath group: "com.liferay", name: "com.liferay.gradle.plugins", version: "2.0.10"
+ 	}
+
+	repositories {
+		mavenLocal()
+
+		maven {
+			mavenCentral()
+			url "https://cdn.lfrs.sl/repository.liferay.com/nexus/content/groups/public"
+		}
+	}
+}
+
+apply plugin: "com.liferay.plugin"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel", version: "2.0.0"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib", version: "2.0.0"
+	compileOnly group: "javax.portlet", name: "portlet-api", version: "2.0"
+	compileOnly group: "javax.servlet", name: "servlet-api", version: "2.5"
+	compileOnly group: "jstl", name: "jstl", version: "1.2"
+	compileOnly group: "org.osgi", name: "org.osgi.compendium", version: "5.0.0"
+	compile group: "org.slf4j", name: "slf4j-api", version: "1.7.+"
+    compile group: "org.springframework", name: "spring-web", version: "4.3.8.RELEASE"
+    compile group: "commons-codec", name: "commons-codec", version: "1.5"
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.8'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.3'
+    
+ 
+    runtime group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+    runtime group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.8'
+    runtime group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.8.3'
+    
+    
+}
+
+repositories {
+	mavenLocal()
+
+	maven {
+		url "https://cdn.lfrs.sl/repository.liferay.com/nexus/content/groups/public"
+	}
+}
